@@ -1,4 +1,6 @@
 local function releaseStorage(playerId, storageValue)
+	-- Storage values are automatically saved in the database if the player disconnects or server save time
+	-- Here, the player logged out, so we use a database call instead.
 	db.query("DELETE FROM `player_storage` WHERE `player_id` = " .. playerId .. " and `key` = " .. storageValue)
 end
 
