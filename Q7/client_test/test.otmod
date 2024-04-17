@@ -1,0 +1,8 @@
+Module
+  name: client_test
+  description: Display moving button
+  author: Rany
+  sandboxed: true
+  scripts: [ test ]
+  @onLoad: init()
+  @onUnload: terminate()
